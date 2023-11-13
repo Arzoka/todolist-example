@@ -1,5 +1,4 @@
-import { Todos } from "./Todos";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./styles/App/App.css";
 
 export default function App() {
@@ -44,7 +43,22 @@ export default function App() {
   return (
     <div className="flex flex-col h-screen justify-between items-center w-full gap-1 p-10 overflow-hidden">
       <div className="flex w-1/4 text-white">
-        <Todos todo={todos} checkTodo={checkTodo} />
+        <div className="w-full flex flex-col">
+          <h2 className="font-bold text-xl">To do</h2>
+          <div className="flex flex-col gap-1 overflow-y-scroll scrollvert">
+            {todos.map((todo, index) => (
+                <div key={index} className="text-white flex gap-1 text-lg">
+                  <input
+                      onChange={() => checkTodo(todo)}
+                      className="h-full aspect-square"
+                      type="checkbox"
+                      checked={todo.checked}
+                  />
+                  <p className={todo.checked ? "line-through" : ""}>{todo.value}</p>
+                </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="w-1/4 flex justify-center flex-col gap-4">
         <input

@@ -1,0 +1,70 @@
+.scrollvert
+  height: 60vh
+  max-height: 60vh
+
+  &::-webkit-scrollbar
+    width: 3px
+    background: #ffffff80
+    outline: none
+    border: none
+
+    &-thumb
+      background: #000000
+
+.button
+  height: 4rem
+  padding: 0.3rem 1rem 0.3rem 1rem
+  border-radius: 10px
+  color: white
+  background: none
+  border: 1px solid #ffffff80
+  width: 50%
+  font-weight: bold
+  transition: background 0.5s, text-shadow 0.5s, border 0.5s
+
+  &:focus
+    border: 1px solid #00880080
+    outline: 1px solid #00880080
+    background: linear-gradient(0.25turn, #ffffff10, #00000010, #ffffff10, #00000010)
+    filter: brightness(1.1)
+    background-size: 400% 100%
+    text-shadow: 0px 0px 2px white
+    animation: buttonanim 4.5s linear infinite 0.1s
+
+  &:hover
+    background: linear-gradient(0.25turn, #ffffff10, #00000010 50%, #ffffff10)
+    filter: brightness(1.1)
+    background-size: 300% 100%
+    text-shadow: 0px 0px 2px white
+    animation: buttonanim 4.5s linear infinite 0.1s
+
+.input
+  height: 4rem
+  font-size: 1.5rem
+  border-radius: 10px
+  padding: 1rem
+  border: 1px solid #ffffff80
+  background: none
+  outline: none
+  color: white
+  transition: background 0.5s, text-shadow 0.5s, border 0.5s
+
+  &:focus
+    filter: brightness(1.1)
+    outline: 1px solid #00880080
+    border: 1px solid #00880080
+    text-shadow: 0px 0px 2px white
+
+  &:hover
+    filter: brightness(1.1)
+    text-shadow: 0px 0px 2px white
+
+input[type='checkbox']
+  aspect-ratio: 1
+  height: 75%
+
+@keyframes buttonanim
+  from
+    background-position: 0% 0%
+  to
+    background-position: 300% 0%

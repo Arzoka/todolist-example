@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*:focus{
+    border: 1px solid #00880080;
+    outline: 1px solid #00880080;
+}
+
+body{
+    background: radial-gradient(#202020,#121212);
+}
+
+.flex{
+    display: flex;
+}
+
+.flexcol{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexcsb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pv10r{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.hfull{
+    height: 100%;
+}
+
+.wfull{
+    width: 100%;
+}
+
+.hwfull{
+    width: 100%;
+    height: 100%;
+}
+
+.p1r{
+    padding: 1rem;
+}
+
+.p1rv{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.p1rh{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.h5r{
+    height: 5rem;
+}
+
+.gap1r{
+    gap: 1rem;
+}
+
+.w25{
+    width: 25%;
+}
+
+.hhalfscreen{
+    height: 50vh;
+}
+
+.mscreen{
+    min-height: 100vh;
+}
+
+.maxhalfscreen{
+    max-height: 50vh;
+}
+
+.scrollvert{
+    overflow-y: scroll;
+}
+
+.scrollvert::-webkit-scrollbar{
+    width: 3px;
+    background: #ffffff80;
+    outline: none;
+    border: none;
+}
+
+.scrollvert::-webkit-scrollbar-thumb{
+    background: #000000;
+}
+
+.textfff{
+    color: #fff;
+}
+
+.textlg{
+    font-size: 1.5rem;
+}
+
+.textstripe{
+    text-decoration: line-through;
+}
+
+.flexvertc{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    height: 4rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border-radius: 10px;
+    color: white;
+    background: none;
+    border: 1px solid #ffffff80;
+    width: 50%;
+    font-weight: bold;
+    transition: background 0.5s, text-shadow 0.5s, border 0.5s;
+}
+
+.button:focus{
+    border: 1px solid #00880080;
+    outline: 1px solid #00880080;
+    background: linear-gradient(0.25turn, #ffffff10,#00000010,#ffffff10, #00000010);
+    filter: brightness(1.1);
+    background-size: 400% 100%;
+    text-shadow: 0px 0px 2px white;
+    animation: buttonanim 4.5s linear infinite 0.1s;
+}
+
+.button:hover{
+    background: linear-gradient(0.25turn, #ffffff10,#00000010 50%,#ffffff10);
+    filter: brightness(1.1);
+    background-size: 300% 100%;
+    text-shadow: 0px 0px 2px white;
+    animation: buttonanim 4.5s linear infinite 0.1s;
+}
+
+.input{
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid #ffffff80;
+    background: none;
+    outline: none;
+    color: white;
+    transition: background 0.5s, text-shadow 0.5s, border 0.5s;
+}
+
+.input:focus{
+    filter: brightness(1.1);
+    outline: 1px solid #00880080;
+    border: 1px solid #00880080;
+    text-shadow: 0px 0px 2px white;
+}
+
+.input:hover{
+    filter: brightness(1.1);
+    text-shadow: 0px 0px 2px white;
+}
+
+input[type='checkbox'] {
+    aspect-ratio: 1;
+    height: 75%;
+}
+
+@keyframes buttonanim {
+    from{
+        background-position: 0% 0%;
+    }
+    to{
+        background-position: 300% 0%;
+    }
+
+}
